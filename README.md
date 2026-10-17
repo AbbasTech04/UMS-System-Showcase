@@ -59,14 +59,11 @@ A comprehensive, enterprise-level University Management System designed to strea
 ## 📸 Interface Preview
 
 ### Administrative Dashboard
-![Admin Dashboard](./assets/admin_dashboard.png)
 
 ### lecturer Dashboard
-![Lecturer Portal](./assets/lecturer_portal.png)
 
 ### Student Dashboard
-![Student Portal](./assets/student_portal.png)
-
+/assets
 ## 📧 Contact & Business Inquiries
 For live demonstrations, enterprise licensing, or technical inquiries:
 * **LinkedIn:** www.linkedin.com/in/abbas-mohammed-797b3835a
