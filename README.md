@@ -63,7 +63,8 @@ A comprehensive, enterprise-level University Management System designed to strea
 ### lecturer Dashboard
 
 ### Student Dashboard
-/assets
+UMS-System-Showcase/assets/
+
 ## 📧 Contact & Business Inquiries
 For live demonstrations, enterprise licensing, or technical inquiries:
 * **LinkedIn:** www.linkedin.com/in/abbas-mohammed-797b3835a
