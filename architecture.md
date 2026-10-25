@@ -23,11 +23,10 @@ The University Management System (UMS) is designed as a robust, enterprise-grade
  
 ---
 
-### Architectural Review: `StudentDAO.java` & `Student.java`
+### 4. Architectural Review: `StudentDAO.java` & `Student.java`
 
-> **Key architectural highlights include:**
-> 
-> * **Robust Transaction Management:** In `registerStudent` and `updateProfileWithValidation`, you correctly manage transaction boundaries by disabling auto-commit (`conn.setAutoCommit(false)`), executing multi-table operations across students and users, handling rollbacks explicitly on failure, and restoring auto-commit in a finally block. This guarantees ACID compliance and prevents orphaned records.
-> * **Security & Prevention of SQL Injection:** All dynamic queries use `PreparedStatement` with parameterized placeholders (`?`), neutralizing SQL injection vectors entirely.
-> * **Resource Leak Prevention:** Consistent usage of Java 7+ `try-with-resources` blocks for `Connection`, `PreparedStatement`, and `ResultSet` ensures that database cursors and connections are closed reliably, avoiding connection leaks in a long-running application server like GlassFish.
+- **Robust Transaction Management:** In `registerStudent` and `updateProfileWithValidation`, you correctly manage transaction boundaries by disabling auto-commit (`conn.setAutoCommit(false)`), executing multi-table operations across students and users, handling rollbacks explicitly on failure, and restoring auto-commit in a finally block. This guarantees ACID compliance and prevents orphaned records.
+- **Security & Prevention of SQL Injection:** All dynamic queries use `PreparedStatement` with parameterized placeholders (`?`), neutralizing SQL injection vectors entirely.
+- **Resource Leak Prevention:** Consistent usage of Java 7+ `try-with-resources` blocks for `Connection`, `PreparedStatement`, and `ResultSet` ensures that database cursors and connections are closed reliably, avoiding connection leaks in a long-running application server like GlassFish.
+- **Comprehensive Domain Modeling:** `Student.java` serves as a complete rich domain entity that cleanly maps academic demographics, guardian records, qualifications, and financial statuses.> * **Resource Leak Prevention:** Consistent usage of Java 7+ `try-with-resources` blocks for `Connection`, `PreparedStatement`, and `ResultSet` ensures that database cursors and connections are closed reliably, avoiding connection leaks in a long-running application server like GlassFish.
 > * **Comprehensive Domain Modeling:** `Student.java` serves as a complete rich domain entity that cleanly maps academic demographics, guardian records, qualifications, and financial statuses.
