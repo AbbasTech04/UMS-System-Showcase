@@ -29,3 +29,36 @@ The University Management System (UMS) is designed as a robust, enterprise-grade
 - **Security & Prevention of SQL Injection:** All dynamic queries use `PreparedStatement` with parameterized placeholders (`?`), neutralizing SQL injection vectors entirely.
 - **Resource Leak Prevention:** Consistent usage of Java 7+ `try-with-resources` blocks for `Connection`, `PreparedStatement`, and `ResultSet` ensures that database cursors and connections are closed reliably, avoiding connection leaks in a long-running application server like GlassFish.
 - **Comprehensive Domain Modeling:** `Student.java` serves as a complete rich domain entity that cleanly maps academic demographics, guardian records, qualifications, and financial statuses.
+
+---
+
+## Architectural Review: `UpdateSelfProfileServlet.java`
+
+`UpdateSelfProfileServlet` is a centralized, role-based controller.
+
+### Core Engineering Highlights
+
+#### 1. Role-Based Handling
+- Selects database tables based on user roles.
+- Validates session attributes.
+- Redirects users to their respective profile pages.
+
+#### 2. File Storage Management
+- Organizes images into `Images/YYYY` directories.
+- Generates timestamp-based filenames.
+- Stores relative file paths in the database.
+
+#### 3. Database Operations
+- Uses conditional SQL updates.
+- Supports primary key identification with an email fallback.
+- Uses `PreparedStatement` for parameterized queries.
+
+### Potential Improvements
+- **Upload Security:** Validate image MIME types and file signatures.
+- **Storage Reliability:** Clean up files when database updates fail.
+- **Error Handling:** Replace `e.printStackTrace()` with structured logging.
+- **Configuration:** Externalize hardcoded storage paths.
+- **Maintainability:** Introduce dedicated service classes.
+
+### Overall
+Provides a unified profile management workflow with opportunities for improved security, reliability, and maintainability.
