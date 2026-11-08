@@ -18,7 +18,6 @@ import java.util.logging.Logger;
  * password. These values should be externalized for production
  * deployments rather than hardcoded in the source code.</p>
  *
- * @author Abbas Mohammed
  * @version 1.0
  * @since 1.0
  */
