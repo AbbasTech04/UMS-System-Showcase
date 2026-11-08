@@ -15,8 +15,6 @@ import java.util.logging.Logger;
  * It allows the application to register students and retrieve
  * students based on their academic major.
  *
- * @author Abbas Mohammed
- *
  */
 public class StudentDAO {
 
