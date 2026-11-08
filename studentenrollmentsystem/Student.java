@@ -6,13 +6,10 @@ import java.sql.Date;
  * Represents a Student entity within the University Management System (UMS).
  * Encapsulates personal demographics, academic history, guardian information, 
  * qualification metrics, document references, and financial status.
- * 
- * @author Abbas Mohammed
- * @version 1.0
  */
 public class Student {
     
-    // Clear core fields... (Your existing getters, setters, and getFullName() method remain pristine and fully optimized)
+    // Here is some of clear core fields... (Your existing getters, setters, and getFullName() method remain pristine and fully optimized)
   
     // 1. Basic database fields
     private int studentId;
